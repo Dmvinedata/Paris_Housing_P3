@@ -2,7 +2,7 @@
 Phase 3 Project 3 Classification- Paris Housing 
 ![Presentation Link]() <br>
 
-![Jupyter Notebook Link]() 
+![Jupyter Notebook Link]()  <br>
 
 ## Author: Deztany Jackson
 
@@ -31,6 +31,8 @@ Due to data imbalance and business goal our main metrics  will be : ** Precision
 [F1 Score Metric, Joos Kortanje, 2021](https://towardsdatascience.com/the-f1-score-bec2bbc38aa6)
 
 # Modeling
+
+Modeling will be done interatively. As new information is learned new models, parameters and transformation techniques will be applied.
 
 ***
 ![Classificaiton Distribution](https://github.com/Dmvinedata/)
@@ -61,8 +63,10 @@ Afterwards we will apply gridsearch to the same pipeline.
 Gridsearch allows running various combinations of hyperparameters and viewing their performance. The gridsearch parameters were manually chosen. Because of resource limitations a small amount of parameter and hyperparameter options were chosen. There were attempts for hyperparamters options chosen on a spectrum. 
 
 # Evaluation
+***
+![Classificaiton Distribution](https://github.com/Dmvinedata/)
+***
 
-## Results
 
 ## Best Estimator
 
@@ -72,6 +76,19 @@ Pipeline(steps=[('ct', StandardScaler()),
                  RandomForestClassifier(criterion='entropy', max_depth=5,
                                         min_samples_leaf=7, n_estimators=10,
                                         random_state=42))])
+                                        
+## Results
+
+Best Estimator Random Forest Average Precision: 0.52
+Best Estimator Random Forest Average F1_Score: 0.13
+
+The precision score is similar to the best Simple models and models ran with the SMOTE & Scaled transformation from the Logistic Regression and Random Forest models classifier.
+
+The f1_score drastically dropped around 300-400% compared the best models.
+
+A general review of the statstics would not have made it clear GridSearch "Best Estimator" to be the best model.
+However, it gives a low TP 24 (.1%), and also gives the lowest FP 20 (.1%) from the all the models. Others have higher TP and FP combined. The stakeholder has a larger "luxury" list to choose from, but introduces more chances of getting "Basic" property accidently. Therefore, this model still meets the expectations fo meeting the orginal goal. 
+
 ## Best Features 
 The top 5 featureswere:
 
@@ -82,6 +99,23 @@ The top 5 featureswere:
 - Building_Size(m)
 
 The top two features are still "Has_Yard" and "Has_Pool".  These were the same top two that were identified in the previous correlation matrix pre-modeling. 
+
 # Conclusion
-## Reccomendation
+
 ## Limitation
+
+- Imbalanced data between "Basic" and "Luxury" limits accurate and useful metrics
+- With data amount and imbalance, synthetic data was created. It only is a limited representation of the real data.
+- Limited computing resources, limit parameter and model combination computations 
+- Limited knowledge of stakeholders specific requerements
+- No knowledge on the condition and grade of the proper. Especially since "Basic" and "Luxury" property has many overlapping similarilys
+
+## Reccomendation
+
+- Recommend using the "best" model if satisfied with a small list of "Luxury" property listings, which includes a small error chance
+- Recommend looking into predicted "Basic" and "Luxury" property that has a yard, pool and increased guess rooms.
+- Recommend not using the chosen model to base final searches on, better for initial. The distribution is too small. 
+- Recommend identifying criteria requirements for top features and increasing the chances/error of a "Basic" property being chosen. 
+- Recommend changing classification from binary of "Basic and Luxury" to multi-classification  with more than 3 gradients
+   
+

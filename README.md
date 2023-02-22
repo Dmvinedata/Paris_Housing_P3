@@ -70,17 +70,14 @@ Gridsearch allows running various combinations of hyperparameters and viewing th
 
 ## Best Estimator
 
-Pipeline(steps=[('ct', StandardScaler()),
-                ('sm', SMOTE(random_state=42, sampling_strategy=0.2)),
-                ('rf',
-                 RandomForestClassifier(criterion='entropy', max_depth=5,
-                                        min_samples_leaf=7, n_estimators=10,
-                                        random_state=42))])
+- StandardScaker
+- SMOTE (random_state=42, sampling_strategy=0.2)
+- RandomForestClassifier (criterion='entropy',max_depth=5,min_samples_leaf=7,n_estimators=10,    random_state=42)
                                         
 ## Results
 
-Best Estimator Random Forest Average Precision: 0.52
-Best Estimator Random Forest Average F1_Score: 0.13
+- Best Estimator Random Forest Average Precision: 0.52
+- Best Estimator Random Forest Average F1_Score: 0.13
 
 The precision score is similar to the best Simple models and models ran with the SMOTE & Scaled transformation from the Logistic Regression and Random Forest models classifier.
 
@@ -104,18 +101,20 @@ The top two features are still "Has_Yard" and "Has_Pool".  These were the same t
 
 ## Limitation
 
-- Imbalanced data between "Basic" and "Luxury" limits accurate and useful metrics
-- With data amount and imbalance, synthetic data was created. It only is a limited representation of the real data.
-- Limited computing resources, limit parameter and model combination computations 
-- Limited knowledge of stakeholders specific requerements
-- No knowledge on the condition and grade of the proper. Especially since "Basic" and "Luxury" property has many overlapping similarilys
+- Imbalanced data between "Basic" and “Luxury" properties
+- Used synthetic data
+- Limited computing resources
+- Limited knowledge of stakeholders requirements
+- No knowledge on the condition of property
+
 
 ## Reccomendation
 
-- Recommend using the "best" model if satisfied with a small list of "Luxury" property listings, which includes a small error chance
-- Recommend looking into predicted "Basic" and "Luxury" property that has a yard, pool and increased guess rooms.
-- Recommend not using the chosen model to base final searches on, better for initial. The distribution is too small. 
-- Recommend identifying criteria requirements for top features and increasing the chances/error of a "Basic" property being chosen. 
-- Recommend changing classification from binary of "Basic and Luxury" to multi-classification  with more than 3 gradients
+- Recommend using the "best" model for a small  list of "Luxury" property listings
+- Recommend looking any property that has a yard, pool and increased guess rooms.
+- Recommend not using "best" model for initial, not all searches
+- Recommend identifying criteria requirements for top features
+- Recommend  new modeling with more than two classification values 
+
    
 

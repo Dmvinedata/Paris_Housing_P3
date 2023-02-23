@@ -1,15 +1,19 @@
 # Paris_Housing_P3
 Phase 3 Project 3 Classification- Paris Housing 
-![Presentation Link]() <br>
+![Presentation Link](https://github.com/Dmvinedata/Paris_Housing_P3/blob/main/Phase3_Project_Presentation_DJackson.pdf) <br>
 
-![Jupyter Notebook Link]()  <br>
+![Jupyter Notebook Link](https://github.com/Dmvinedata/Paris_Housing_P3/blob/main/p3_paris_notebook.pdf)  <br>
 
 ## Author: Deztany Jackson
 
 
 # Overview
 
-**Classification models will be built to best predict "Luxury" property for a Paris RE investment agency to support leasing to potential clients.**
+**Classification models will be built to best predict "Luxury" property for a Paris Real Estate investment agency to support leasing to potential clients.**
+
+***
+![City of Paris Buildings](https://github.com/Dmvinedata/Paris_Housing_P3/blob/main/images/paris_image.jpg)
+***
 
 # Business Understanding
 
@@ -35,7 +39,7 @@ Due to data imbalance and business goal our main metrics  will be : ** Precision
 Modeling will be done interatively. As new information is learned new models, parameters and transformation techniques will be applied.
 
 ***
-![Classificaiton Distribution](https://github.com/Dmvinedata/)
+![Classificaiton Distribution](https://github.com/Dmvinedata/Paris_Housing_P3/blob/main/images/dist.png)
 ***
 
 ## Dummy Classifier
@@ -63,11 +67,11 @@ Afterwards we will apply gridsearch to the same pipeline.
 Gridsearch allows running various combinations of hyperparameters and viewing their performance. The gridsearch parameters were manually chosen. Because of resource limitations a small amount of parameter and hyperparameter options were chosen. There were attempts for hyperparamters options chosen on a spectrum. 
 
 # Evaluation
-***
-![Classificaiton Distribution](https://github.com/Dmvinedata/)
-***
 
-
+***
+![Classificaiton Distribution](***
+![Best Estimator's Classification Matrix](https://github.com/Dmvinedata/Paris_Housing_P3/blob/main/images/dist.png)
+***
 ## Best Estimator
 
 - StandardScaker

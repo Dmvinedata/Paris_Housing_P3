@@ -70,7 +70,7 @@ Gridsearch allows running various combinations of hyperparameters and viewing th
 
 ***
 ![Classificaiton Distribution](***
-![Best Estimator's Classification Matrix](https://github.com/Dmvinedata/Paris_Housing_P3/blob/main/images/dist.png)
+![Best Estimator's Classification Matrix](https://github.com/Dmvinedata/Paris_Housing_P3/blob/main/images/BestEst.png)
 ***
 ## Best Estimator
 

@@ -67,12 +67,13 @@ Afterwards we will apply gridsearch to the same pipeline.
 Gridsearch allows running various combinations of hyperparameters and viewing their performance. The gridsearch parameters were manually chosen. Because of resource limitations a small amount of parameter and hyperparameter options were chosen. There were attempts for hyperparamters options chosen on a spectrum. 
 
 # Evaluation
+## Best Estimator
 
 ***
-![Classificaiton Distribution](***
+![Classificaiton Distribution](
 ![Best Estimator's Classification Matrix](https://github.com/Dmvinedata/Paris_Housing_P3/blob/main/images/BestEst.png)
 ***
-## Best Estimator
+
 
 - StandardScaker
 - SMOTE (random_state=42, sampling_strategy=0.2)
